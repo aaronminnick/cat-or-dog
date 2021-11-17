@@ -1,13 +1,8 @@
 import $ from 'jquery';
-import APIService from "./apiService";
+import Game from './js/game';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
 
-// APIService.getDog()
-//   .then(function(dog) {
-//     $('#demo').prop('src', dog.url);
-//   });
-
-// APIService.getCat()
-//   .then(function(cat) {
-//     $('#demo').prop('src', cat.file);
-//   });
-
+const game = new Game(10);
+$('#score-area').html(`<p>${game.score}</p>`);

@@ -23,6 +23,5 @@ export default class APIService {
       .catch(function(error) {
         console.log(error);
       });
-
   }
 }
