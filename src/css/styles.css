@@ -9,3 +9,26 @@
 #wait-message {
   display: none;
 }
+
+#image-area {
+  display: none;
+  height: 80vh;
+  background-color: black;
+}
+
+#image-area img {
+  height: 100%;
+  animation-name: reveal;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+  0% {
+    clip-path: inset(40% 40% 40% 40% round 100%);
+  }
+
+  100% {
+    clip-path: inset(10% 10% 10% 10% round 20%);
+  }
+}
