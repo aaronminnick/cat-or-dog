@@ -14,6 +14,7 @@ $('#start-button').on('click', () => {
     $('#wait-message').hide();
     $('#game-area').show();
     $('#score-area').html(`<p>Score: ${game.score}</p>`);
+    game.pointsByTime();
   } else {
     $('#wait-message').show();
   }
@@ -22,7 +23,9 @@ $('#start-button').on('click', () => {
 $('#play-buttons-area').on('click', 'button', function() {
   let currImg = $(`#image${game.counter}`);
   if (($(this).prop('id') === 'cat-button' && currImg.prop('class') === "cat") || ($(this).prop('id') === 'dog-button' && currImg.prop('class') === "dog")) {
-    game.score += 1;
+    game.score += game.pointsByTime();
+  } else {
+    game.pointsByTime();
   }
   game.counter += 1;
   currImg.hide();

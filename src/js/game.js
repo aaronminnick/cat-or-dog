@@ -7,6 +7,7 @@ export default class Game {
     this.images = new Map();
     this.imageArea = imageArea;
     this.loaded = false;
+    this.timeTracker = 0;
     
     this.addImages(numberOfImages)
       .then(() => {
@@ -49,6 +50,14 @@ export default class Game {
     this.images.forEach((img, key) => {
       this.imageArea.append(`<img src='${img.url}' class='${img.animal}' id='image${key}'>`);
     });
+  }
+
+  pointsByTime() {
+    let now = Date.now();
+    let timeElapsed = now - this.timeTracker;
+    let secondsPassed = Math.floor((timeElapsed/1000) - .25);
+    this.timeTracker = now;
+    return Math.max(1, (5 - secondsPassed));
   }
 }
 
