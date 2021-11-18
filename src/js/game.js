@@ -1,15 +1,17 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import APIService from "./APIService";
 
 export default class Game {
-  constructor(numberOfImages) {
+  constructor(numberOfImages, imageArea) {
     this.score = 0;
     this.images = new Map();
-    
+    this.loaded = false;
+    this.imageArea = imageArea;
     this.addImages(numberOfImages)
       .then(() => {
         console.log("making tags");
         this.makeImgTags();
+        this.loaded = true;
       });
   }
 
@@ -44,7 +46,7 @@ export default class Game {
 
   makeImgTags() {
     this.images.forEach((img, key) => {
-      $('#image-area').append(`<img src='${img.url}' class='${img.animal}' id='image${key}'>`);
+      this.imageArea.append(`<img src='${img.url}' class='${img.animal}' id='image${key}'>`);
     });
   }
 }

@@ -1,3 +1,11 @@
-.cat, .dog{
+.cat, .dog {
+  display: none;
+}
+
+#play-buttons-area {
+  display: none;
+}
+
+#wait-message {
   display: none;
 }
