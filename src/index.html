@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang='en-US'>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"> 
   <title>CAT OR DOG?</title>
 </head>
 <body>
@@ -9,19 +12,22 @@
       <h1>CAT OR DOG?</h1>
     </div>
     <div id="game-area">
-      <div id='image-area'></div>
+      <div id='image-area'>
+        <div id='score-area'></div>
+      </div>
     </div>
     <div id='start-button-area'>
-      <button class='btn btn-dark' id='start-button'>START!</button>
-    </div>
-    <div id='wait-message'>
-      <p>Images are loading. Please wait a few moments and try again.</p>
+      <h3>PRESS THE BUTTONS TO CHOOSE CAT OR DOG! THE FASTER YOU CHOOSE CORRECTLY, THE MORE POINTS YOU RECEIVE!</h3>
+      <button class='btn btn-dark' id='start-button'><h4>START!</h4></button>
+      <h4 id='wait-message'>Images are loading. Please wait a few moments and try again.</h4>
     </div>
     <div id='play-buttons-area'>
-      <button class='btn btn-dark' id='cat-button'>THAT'S A CAT</button>
-      <button class='btn btn-dark' id='dog-button'>DEFFO A DOG</button>
+      <button class='btn btn-dark' id='cat-button'><h4>THAT'S A CAT</h4></button>
+      <button class='btn btn-dark' id='dog-button'><h4>DEFFO A DOG</h4></button>
     </div>
-    <div id='score-area'></div>
+    <div id='play-again-area'>
+      <button class="btn btn-dark" id='play-again'><h4>PLAY AGAIN!</h4></button>
+    </div>
   </div>
 </body>
 </html>

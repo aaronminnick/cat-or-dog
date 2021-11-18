@@ -8,6 +8,7 @@ export default class Game {
     this.imageArea = imageArea;
     this.loaded = false;
     this.timeTracker = 0;
+    this.correctTracker = 0;
     
     this.addImages(numberOfImages)
       .then(() => {

@@ -1,9 +1,36 @@
+body {
+  --dark-color: rgb(30, 30, 30);
+  font-family: 'Luckiest Guy', cursive;
+  background-color: burlywood;
+  color: var(--dark-color);
+}
+
+h1 {
+  margin-top: 3vh;
+  text-align: center;
+}
 .cat, .dog {
   display: none;
 }
 
+.btn-dark {
+  margin: 2vh;
+  background-color: var(--dark-color);
+  padding-top: 1vh;
+}
+
+button:hover {
+  filter: drop-shadow(0px 0px .5vh var(--dark-color));
+}
+
+#start-button-area {
+  padding: 2vh 25vw 0vh 25vw;
+  text-align: center;
+}
+
 #play-buttons-area {
   display: none;
+  text-align: center;
 }
 
 #wait-message {
@@ -14,12 +41,24 @@
   display: none;
 }
 
+#play-again-area {
+  display: none;
+  text-align: center;
+}
+
+#score-area {
+  color: white;
+  position: absolute;
+  margin-top: 3vh;
+}
+
 #image-area {
   display: flex;
-  height: 80vh;
-  background-color: black;
+  height: 76vh;
+  background-color: var(--dark-color);
   overflow: hidden;
   justify-content: center;
+  border-radius: 20vh;
 }
 
 #image-area img {
