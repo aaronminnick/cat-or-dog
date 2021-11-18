@@ -52,6 +52,37 @@ button:hover {
   margin-top: 3vh;
 }
 
+#current-round-area {
+  color: white;
+  position: absolute;
+  margin-top: 70vh;
+}
+
+#answer-response-area {
+  position: absolute;
+  text-align: center;
+  margin-top: 30vh;
+  z-index: 1;
+  animation-name: shake;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+
+.answer {
+  display: none;
+  font-size: 400%;
+}
+
+#right-answer-cat, #right-answer-dog {
+  color: green;
+}
+
+#wrong-answer-cat, #wrong-answer-dog {
+  color: red;
+}
+
 #image-area {
   display: flex;
   height: 76vh;
@@ -75,5 +106,19 @@ button:hover {
 
   100% {
     clip-path: inset(10% 10% 10% 10% round 20%);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
   }
 }

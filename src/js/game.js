@@ -9,6 +9,7 @@ export default class Game {
     this.loaded = false;
     this.timeTracker = 0;
     this.correctTracker = 0;
+    this.inputAllowed = true;
     
     this.addImages(numberOfImages)
       .then(() => {
@@ -56,7 +57,7 @@ export default class Game {
   pointsByTime() {
     let now = Date.now();
     let timeElapsed = now - this.timeTracker;
-    let secondsPassed = Math.floor((timeElapsed/1000) - .25);
+    let secondsPassed = Math.floor((timeElapsed/1000) - .52);
     this.timeTracker = now;
     return Math.max(1, (5 - secondsPassed));
   }
