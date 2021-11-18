@@ -13,25 +13,15 @@ $('#start-button').on('click', () => {
     $('#start-button').hide();
     $('#wait-message').hide();
     $('#game-area').show();
+    $('#score-area').html(`<p>Score: ${game.score}</p>`);
   } else {
     $('#wait-message').show();
   }
 });
 
-$('#cat-button').on('click', () => {
+$('#play-buttons-area').on('click', 'button', function() {
   let currImg = $(`#image${game.counter}`);
-  if (currImg.prop('class') === "cat") {
-    game.score += 1;
-  }
-  game.counter += 1;
-  currImg.hide();
-  currImg.next().show();
-  $('#score-area').html(`<p>Score: ${game.score}</p>`);
-});
-
-$('#dog-button').on('click', () => {
-  let currImg = $(`#image${game.counter}`);
-  if (currImg.prop('class') === "dog") {
+  if (($(this).prop('id') === 'cat-button' && currImg.prop('class') === "cat") || ($(this).prop('id') === 'dog-button' && currImg.prop('class') === "dog")) {
     game.score += 1;
   }
   game.counter += 1;
