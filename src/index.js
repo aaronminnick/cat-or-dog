@@ -12,7 +12,7 @@ $('#start-button').on('click', () => {
     $('#image0').show();
     $('#start-button').hide();
     $('#wait-message').hide();
-    $('#image-area').show();
+    $('#game-area').show();
   } else {
     $('#wait-message').show();
   }

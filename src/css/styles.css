@@ -10,10 +10,16 @@
   display: none;
 }
 
-#image-area {
+#game-area {
   display: none;
+}
+
+#image-area {
+  display: flex;
   height: 80vh;
   background-color: black;
+  overflow: hidden;
+  justify-content: center;
 }
 
 #image-area img {
