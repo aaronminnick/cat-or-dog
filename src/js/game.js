@@ -5,7 +5,7 @@ export default class Game {
   constructor(numberOfImages) {
     this.score = 0;
     this.images = new Map();
-
+    
     this.addImages(numberOfImages)
       .then(() => {
         console.log("making tags");
