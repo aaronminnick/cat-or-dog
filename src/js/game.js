@@ -1,12 +1,13 @@
-// import $ from 'jquery';
 import APIService from "./APIService";
 
 export default class Game {
   constructor(numberOfImages, imageArea) {
+    this.counter = 0;
     this.score = 0;
     this.images = new Map();
-    this.loaded = false;
     this.imageArea = imageArea;
+    this.loaded = false;
+    
     this.addImages(numberOfImages)
       .then(() => {
         console.log("making tags");

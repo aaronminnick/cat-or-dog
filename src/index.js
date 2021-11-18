@@ -17,5 +17,24 @@ $('#start-button').on('click', () => {
   }
 });
 
+$('#cat-button').on('click', () => {
+  let currImg = $(`#image${game.counter}`);
+  if (currImg.prop('class') === "cat") {
+    game.score += 1;
+  }
+    game.counter += 1;
+    currImg.hide();
+    currImg.next().show();
+    $('#score-area').html(`<p>Score: ${game.score}</p>`);
+});
 
-$('#score-area').html(`<p>${game.score}</p>`);
+$('#dog-button').on('click', () => {
+  let currImg = $(`#image${game.counter}`);
+  if (currImg.prop('class') === "dog") {
+    game.score += 1;
+  }
+    game.counter += 1;
+    currImg.hide();
+    currImg.next().show();
+    $('#score-area').html(`<p>Score: ${game.score}</p>`);
+});
