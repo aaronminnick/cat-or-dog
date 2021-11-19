@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"> 
+  <title>CAT OR DOG?</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='jumbotron'>
+      <h1>CAT OR DOG?</h1>
+    </div>
+    <div id="game-area">
+      <div id='image-area'>
+        <div id='score-area'></div>
+        <div id='answer-response-area'>
+          <h1 class='answer' id='right-answer-cat'>MEOW! THAT'S RIGHT!</h1>
+          <h1 class='answer' id='wrong-answer-cat'>YOWL!!!</h1>
+          <h1 class='answer' id='right-answer-dog'>MUCH CORRECT! MANY WOW!</h1>
+          <h1 class='answer' id='wrong-answer-dog'>RUH ROH!</h1>
+        </div>
+        <div id="current-round-area"></div>
+      </div>
+    </div>
+    <div id='start-button-area'>
+      <h3>PRESS THE BUTTONS TO CHOOSE CAT OR DOG!* THE FASTER YOU CHOOSE CORRECTLY, THE MORE POINTS YOU RECEIVE!</h3>
+      <h6>*You may experience errors in scoring for images which contain both cats and dogs.</h6>
+      <button class='btn btn-dark' id='start-button'><h4>START!</h4></button>
+      <h4 id='wait-message'>Images are loading. Please wait a few moments and try again.</h4>
+    </div>
+    <div id='play-buttons-area'>
+      <button class='btn btn-dark' id='cat-button'><h4>THAT'S A CAT</h4></button>
+      <button class='btn btn-dark' id='dog-button'><h4>DEFFO A DOG</h4></button>
+    </div>
+    <div id='play-again-area'>
+      <button class="btn btn-dark" id='play-again'><h4>PLAY AGAIN!</h4></button>
+    </div>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
