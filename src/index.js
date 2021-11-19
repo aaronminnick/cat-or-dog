@@ -14,7 +14,7 @@ $('#start-button').on('click', () => {
     $('#wait-message').hide();
     $('#game-area').show();
     $('#score-area').html(`<h4>Score: ${game.score}</h4>`);
-    $('#current-round-area').html(`<h4>Round: ${game.counter} / ${game.images.size}`);
+    $('#current-round-area').html(`<h4>Round: ${game.counter + 1} / ${game.images.size}`);
     game.pointsByTime();
   } else {
     $('#wait-message').show();
@@ -50,13 +50,14 @@ $('#play-buttons-area').on('click', 'button', function() {
         `);
       $('#score-area').css('margin-top', '35vh');
       $('#score-area').fadeToggle(0).delay(250).fadeIn(250);
+      $('#current-round-area').hide();
       $('#play-buttons-area').hide();
       $('#play-again-area').show();
     } else {
       game.counter += 1;
       currImg.next().delay(270).fadeIn(0, () => game.inputAllowed = true);
       $('#score-area').html(`<h4>Score: ${game.score}</h4>`);
-      $('#current-round-area').html(`<h4>Round: ${game.counter} / ${game.images.size}`);
+      $('#current-round-area').html(`<h4>Round: ${game.counter + 1} / ${game.images.size}`);
     }
   }
 });

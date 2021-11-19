@@ -9,6 +9,11 @@ h1 {
   margin-top: 3vh;
   text-align: center;
 }
+
+h6 {
+  color: rgb(110, 110, 110);
+}
+
 .cat, .dog {
   display: none;
 }
