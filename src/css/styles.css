@@ -29,7 +29,7 @@ button:hover {
 }
 
 #start-button-area {
-  padding: 2vh 25vw 0vh 25vw;
+  padding: 2vh auto 0vh auto;
   text-align: center;
 }
 
