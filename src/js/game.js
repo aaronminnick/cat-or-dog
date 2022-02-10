@@ -13,7 +13,6 @@ export default class Game {
     
     this.addImages(numberOfImages)
       .then(() => {
-        console.log("making tags");
         this.makeImgTags();
         this.loaded = true;
       });
@@ -34,14 +33,12 @@ export default class Game {
         APIService.getDog()
           .then((dog) => this.images.set(index, new ImageCard(dog.url, 'dog')))
           .then(() => {
-            console.log(`added dog at ${index}`);
             resolve();
           });
       } else {
         APIService.getCat()
           .then((cat) => this.images.set(index, new ImageCard(cat.file, 'cat')))
           .then(() => {
-            console.log(`added cat at ${index}`);
             resolve();
           });
       }
